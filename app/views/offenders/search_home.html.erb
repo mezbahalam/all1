@@ -1,0 +1,23 @@
+<br />
+<br />
+<br />
+<div id="matrix">Offender Profile</div>
+<br />
+
+<%= search_form_for @search, url: search_offenders_path, method: :post do |f| %>
+  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c  %>
+  <% end %>
+  <p ><%=  link_to_add_fields "Add condition", f, :condition %></p>
+  <br />
+  <br />
+  <div class="action"><%= f.submit "Search" %></div>
+<% end %>
+<div id="user_nav">
+	<% if user_signed_in? %>
+		Signed in as <%= current_user.email %>. Not you?
+			<%= link_to "Sign out",destroy_user_session_path, method: :delete %>
+	<% else %>
+		<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>.
+	<% end %>
+</div>

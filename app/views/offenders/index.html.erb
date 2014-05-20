@@ -1,0 +1,52 @@
+<br />
+<h1>Offender Profile</h1>
+<%= search_form_for @search, url: search_offenders_path, method: :post do |f| %>
+  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c  %>
+  <% end %>
+  <p ><%=  link_to_add_fields "Add condition", f, :condition %></p>
+  <br />
+  <br />
+  <div class="action"><%= f.submit "Search" %></div>
+<% end %>
+<br />
+<br />
+<%= paginate @offenders %>
+<table id="offenders">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Mobile no</th>
+      <th>Occupation</th>
+      <th>Crimes</th>
+      <th>Father name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @offenders.each do |offender| %>
+      <tr>
+        <td><%= image_tag offender.image_url(:thumb) if offender.image? %></td>
+        <td><%= offender.name %></td>
+        <td><%= offender.age %></td>
+        <td><%= offender.address %></td>
+        <td><%= offender.mobile_no %></td>
+        <td><%= offender.occupation %></td>
+        <td><%= offender.crimes %></td>
+        <td><%= offender.father_name %></td>
+        <br />
+        <td><%= link_to 'Show', offender, class: 'back' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @offenders %>
+<br>
+
+

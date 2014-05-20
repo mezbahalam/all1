@@ -1,0 +1,81 @@
+<%= form_for @offender, :html => {:multipart => true} do |f| %>
+  <% if @offender.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offender.errors.count, "error") %> prohibited this offender from being saved:</h2>
+
+      <ul>
+      <% @offender.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_no %><br>
+    <%= f.text_field :mobile_no %>
+  </div>
+  <div class="field">
+    <%= f.label :occupation %><br>
+    <%= f.text_field :occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :religion %><br>
+    <%= f.text_field :religion %>
+  </div>
+  <div class="field">
+    <%= f.label :educational_background %><br>
+    <%= f.text_field :educational_background %>
+  </div>
+  <div class="field">
+    <%= f.label :crimes %><br>
+    <%= f.text_field :crimes %>
+  </div>
+  <div class="field">
+    <%= f.label :father_name %><br>
+    <%= f.text_field :father_name %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_name %><br>
+    <%= f.text_field :mother_name %>
+  </div>
+  <div class="field">
+    <%= f.label :father_occupation %><br>
+    <%= f.text_field :father_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_occupation %><br>
+    <%= f.text_field :mother_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :family_income %><br>
+    <%= f.text_field :family_income %>
+  </div>
+  <div class="field">
+    <%= f.label :psychological_status %><br>
+    <%= f.text_field :psychological_status %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

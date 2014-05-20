@@ -1,0 +1,89 @@
+div id = "show">
+<p id="notice"><%= notice %></p>
+<p id="image" >
+  
+  <%= image_tag(@offender.image_url, :width => 250) if @offender.image.present? %><strong id="imag">Image:</strong>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @offender.name %>
+</p>
+
+<p>
+  <strong>Mobile no:</strong>
+  <span class='red'><%= @offender.mobile_no %></span>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @offender.gender %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @offender.age %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <span class='red'><%= @offender.address %></span>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @offender.occupation %>
+</p>
+
+<p>
+  <strong>Religion:</strong>
+  <%= @offender.religion %>
+</p>
+
+<p>
+  <strong>Educational background:</strong>
+  <%= @offender.educational_background %>
+</p>
+
+<p>
+  <strong>Crimes:</strong>
+  <span class='red'><%= @offender.crimes %></span>
+</p>
+
+<p>
+  <strong>Father name:</strong>
+  <%= @offender.father_name %>
+</p>
+
+<p>
+  <strong>Mother name:</strong>
+  <%= @offender.mother_name %>
+</p>
+
+<p>
+  <strong>Father occupation:</strong>
+  <%= @offender.father_occupation %>
+</p>
+
+<p>
+  <strong>Mother occupation:</strong>
+  <%= @offender.mother_occupation %>
+</p>
+
+<p>
+  <strong>Family income:</strong>
+  <%= @offender.family_income %>
+</p>
+
+<p>
+  <strong>Psychological status:</strong>
+  <%= @offender.psychological_status %>
+</p>
+<br />
+<br />
+
+<%= link_to 'Back', root_path, class: 'back'  %>
+</div>
+
+
+
