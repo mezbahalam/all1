@@ -1,28 +1,25 @@
-== README
+Trying to create offender profiling(search offender) apps with GPS location, name, gender, age, address, mobile_no, occupation,
+religion, educational_background, crimes, father_name, mother_name, father_occupation,
+mother_occupation, family_income,psychological_status,image
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+and user can view offender profile through login
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+and cool administration monitoring (gem active_admin and public_activity )
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+uses::
+0. preliminary investigation (quick search)
+
+1. easy to search  suspect
+
+2. find offenders address and gps location(nearby)
+
+3. offender's previous crime
+
+4. offender  background & other information
+
+5.and also monitoring users
+
+
+# you can use it as you want to...
